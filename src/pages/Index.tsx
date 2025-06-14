@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Mail, Github, Linkedin, Download, ExternalLink, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -173,9 +174,9 @@ const Index = () => {
             <h3 className="text-2xl font-semibold text-white mb-4">Tech Stack</h3>
             <div className="space-y-4">
               <div>
-                <h4 className="text-lg font-medium text-gray-300 mb-2">Languages & Frameworks</h4>
+                <h4 className="text-lg font-medium text-gray-300 mb-2">Programming Languages</h4>
                 <div className="flex flex-wrap gap-2">
-                  {["Python", "JavaScript", "Go", "FastAPI", "Django", "React"].map((tech) => (
+                  {["Python", "Bash", "PowerShell"].map((tech) => (
                     <Badge key={tech} variant="secondary" className="bg-blue-500/20 text-blue-300 border-blue-500/30">
                       {tech}
                     </Badge>
@@ -183,9 +184,19 @@ const Index = () => {
                 </div>
               </div>
               <div>
-                <h4 className="text-lg font-medium text-gray-300 mb-2">Cloud & DevOps</h4>
+                <h4 className="text-lg font-medium text-gray-300 mb-2">Network Protocols</h4>
                 <div className="flex flex-wrap gap-2">
-                  {["AWS", "Azure", "Kubernetes", "Docker", "Terraform", "Ansible"].map((tech) => (
+                  {["BGP", "OSPF", "EIGRP", "RIP"].map((tech) => (
+                    <Badge key={tech} variant="secondary" className="bg-cyan-500/20 text-cyan-300 border-cyan-500/30">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h4 className="text-lg font-medium text-gray-300 mb-2">Automation & IaC</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["Ansible", "Terraform", "Nautobot", "CI/CD", "GitHub Actions"].map((tech) => (
                     <Badge key={tech} variant="secondary" className="bg-purple-500/20 text-purple-300 border-purple-500/30">
                       {tech}
                     </Badge>
@@ -193,10 +204,40 @@ const Index = () => {
                 </div>
               </div>
               <div>
-                <h4 className="text-lg font-medium text-gray-300 mb-2">Network Technologies</h4>
+                <h4 className="text-lg font-medium text-gray-300 mb-2">Cloud & Container Platforms</h4>
                 <div className="flex flex-wrap gap-2">
-                  {["NAPALM", "Netmiko", "Cisco IOS", "Juniper", "BGP", "OSPF"].map((tech) => (
-                    <Badge key={tech} variant="secondary" className="bg-cyan-500/20 text-cyan-300 border-cyan-500/30">
+                  {["Azure", "Oracle Cloud", "Kubernetes", "Docker"].map((tech) => (
+                    <Badge key={tech} variant="secondary" className="bg-green-500/20 text-green-300 border-green-500/30">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h4 className="text-lg font-medium text-gray-300 mb-2">Network Platforms</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["Cisco IOS", "Cisco NXOS", "Versa SD-WAN", "Cisco DNA Center", "Versa Director"].map((tech) => (
+                    <Badge key={tech} variant="secondary" className="bg-orange-500/20 text-orange-300 border-orange-500/30">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h4 className="text-lg font-medium text-gray-300 mb-2">Enterprise Tools & DevOps</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["Infoblox", "ServiceNow", "GitHub", "Git", "Azure DevOps"].map((tech) => (
+                    <Badge key={tech} variant="secondary" className="bg-red-500/20 text-red-300 border-red-500/30">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h4 className="text-lg font-medium text-gray-300 mb-2">Agile & Project Management</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["Scrum Master", "Sprint Planning", "Sprint Reviews", "Retrospectives"].map((tech) => (
+                    <Badge key={tech} variant="secondary" className="bg-indigo-500/20 text-indigo-300 border-indigo-500/30">
                       {tech}
                     </Badge>
                   ))}
