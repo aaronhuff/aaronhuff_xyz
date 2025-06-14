@@ -69,7 +69,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              DevOps.dev
+              aaronhuff.xyz
             </div>
             <div className="hidden md:flex space-x-8">
               <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-white transition-colors">About</button>
