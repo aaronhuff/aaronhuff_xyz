@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Mail, Github, Linkedin, Download, ExternalLink, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -114,22 +113,21 @@ const Index = () => {
               >
                 View My Work
               </Button>
-              <Button 
-                variant="outline" 
-                className="border-gray-600 text-gray-300 hover:bg-white hover:text-black px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300"
-              >
-                <Download className="mr-2 h-5 w-5" />
-                Download Resume
               <a
                 href="https://storage.googleapis.com/ahuff/man-page-aaronhuff.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
                 download
               >
-                <Download className="mr-2 h-5 w-5" />
-                Download Resume
-              </a></div>
+                <Button 
+                  variant="outline" 
+                  className="border-gray-600 text-gray-300 hover:bg-white hover:text-black px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Resume
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
 
