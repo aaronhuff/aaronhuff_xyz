@@ -10,7 +10,7 @@ const Index = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const roles = [
     "Network Automation Engineer",
-    "Cloud Native Python Developer",
+    "Cloud Native Developer",
     "Infrastructure as Code Specialist",
     "DevOps Engineer"
   ];
@@ -120,8 +120,16 @@ const Index = () => {
               >
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
-              </Button>
-            </div>
+              <a
+                href="https://storage.googleapis.com/ahuff/man-page-aaronhuff.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                download
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume
+              </a></div>
           </div>
         </div>
 
