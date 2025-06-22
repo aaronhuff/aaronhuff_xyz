@@ -8,6 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { supabase } from "@/integrations/supabase/client";
 import * as z from "zod";
 
 const formSchema = z.object({
@@ -36,8 +37,16 @@ const Contact = () => {
     console.log("Form submitted with values:", values);
     
     try {
-      // Simulate sending email (replace with actual email service integration)
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: values,
+      });
+
+      if (error) {
+        console.error("Error sending email:", error);
+        throw error;
+      }
+
+      console.log("Email sent successfully:", data);
       
       toast({
         title: "Message sent successfully!",
