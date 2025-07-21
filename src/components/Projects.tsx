@@ -14,11 +14,11 @@ const Projects = () => {
       demo: "#"
     },
     {
-      title: "Cloud-Native Monitoring Stack",
-      description: "Kubernetes-based monitoring solution with Prometheus, Grafana, and custom Python operators",
-      tech: ["Kubernetes", "Python", "Prometheus", "Grafana"],
+      title: "Decidely.me",
+      description: "Technology decision-making platform that guides users through personalized comparisons to find the perfect solution",
+      tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       github: "#",
-      demo: "#"
+      demo: "https://decidely.me/"
     },
     {
       title: "Infrastructure as Code Pipeline",
