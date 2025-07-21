@@ -71,7 +71,7 @@ const Projects = () => {
                   <Button variant="outline" size="sm" className="border-gray-600 text-gray-300 hover:bg-white hover:text-black" asChild>
                     <a href={project.demo} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="mr-2 h-4 w-4" />
-                      Demo
+                      Visit Site
                     </a>
                   </Button>
                 )}
