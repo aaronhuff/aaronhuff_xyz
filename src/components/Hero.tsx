@@ -48,11 +48,21 @@ const Hero = ({ scrollToSection }: HeroProps) => {
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Aaron Huff
-            </span>
-          </h1>
+          <div className="mb-6">
+            <pre className="text-2xl md:text-4xl font-mono leading-tight">
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+{`  ▄▄▄       ▄▄▄       ██▀███   ▒█████   ███▄    █     ██░ ██  █    ██   █████▒ █████▒
+ ▒████▄    ▒████▄    ▓██ ▒ ██▒▒██▒  ██▒ ██ ▀█   █    ▓██░ ██▒ ██  ▓██▒▓██   ▒▓██   ▒ 
+ ▒██  ▀█▄  ▒██  ▀█▄  ▓██ ░▄█ ▒▒██░  ██▒▓██  ▀█ ██▒   ▒██▀▀██░▓██  ▒██░▒████ ░▒████ ░ 
+ ░██▄▄▄▄██ ░██▄▄▄▄██ ▒██▀▀█▄  ▒██   ██░▓██▒  ▐▌██▒   ░▓█ ░██ ▓▓█  ░██░░▓█▒  ░░▓█▒  ░ 
+  ▓█   ▓██▒ ▓█   ▓██▒░██▓ ▒██▒░ ████▓▒░▒██░   ▓██░   ░▓█▒░██▓▒▒█████▓ ░▒█░   ░▒█░    
+  ▒▒   ▓▒█░ ▒▒   ▓▒█░░ ▒▓ ░▒▓░░ ▒░▒░▒░ ░ ▒░   ▒ ▒     ▒ ░░▒░▒░▒▓▒ ▒ ▒  ▒ ░    ▒ ░    
+   ▒   ▒▒ ░  ▒   ▒▒ ░  ░▒ ░ ▒░  ░ ▒ ▒░ ░ ░░   ░ ▒░    ▒ ░▒░ ░░░▒░ ░ ░  ░      ░      
+   ░   ▒     ░   ▒     ░░   ░ ░ ░ ░ ▒     ░   ░ ░     ░  ░░ ░ ░░░ ░ ░  ░ ░    ░ ░    
+       ░  ░      ░  ░   ░         ░ ░           ░     ░  ░  ░   ░                    `}
+              </span>
+            </pre>
+          </div>
           <div className="h-16 md:h-20 mb-8">
             <h2 className="text-2xl md:text-3xl text-gray-300 font-light">
               {displayText}
