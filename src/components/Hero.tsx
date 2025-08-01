@@ -48,8 +48,8 @@ const Hero = ({ scrollToSection }: HeroProps) => {
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="animate-fade-in">
-          <div className="mb-6">
-            <pre className="text-xl md:text-3xl font-mono font-bold leading-tight">
+          <div className="mb-6 mt-12">
+            <pre className="text-lg md:text-2xl font-mono font-bold leading-none">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
 {`  █████╗  █████╗ ██████╗  ██████╗ ███╗   ██╗
  ██╔══██╗██╔══██╗██╔══██╗██╔═══██╗████╗  ██║
@@ -63,7 +63,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
  ███████║██║   ██║█████╗  █████╗  
  ██╔══██║██║   ██║██╔══╝  ██╔══╝  
  ██║  ██║╚██████╔╝██║     ██║     
- ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝`}
+ ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝     `}
               </span>
             </pre>
           </div>
