@@ -12,7 +12,6 @@ const Hero = ({ scrollToSection }: HeroProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const roles = [
     "Network Automation Engineer",
-    "Cloud Native Developer",
     "Infrastructure as Code Specialist",
     "DevOps Engineer"
   ];
@@ -48,7 +47,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="animate-fade-in">
-          <div className="mb-6 mt-12">
+          <div className="mb-6 pt-24 md:pt-32 lg:pt-40 xl:pt-48">
             <pre className="text-lg md:text-2xl font-mono font-bold leading-none">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
 {`  █████╗  █████╗ ██████╗  ██████╗ ███╗   ██╗
