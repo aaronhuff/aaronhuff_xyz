@@ -107,6 +107,16 @@ const About = () => {
                 ))}
               </div>
             </div>
+            <div>
+              <h4 className="text-lg font-medium text-gray-300 mb-2">AI Development</h4>
+              <div className="flex flex-wrap gap-2">
+                {["Agentic AI Development", "Large Language Models", "Prompt Engineering"].map((tech) => (
+                  <Badge key={tech} variant="secondary" className="bg-yellow-500/20 text-yellow-300 border-yellow-500/30">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
