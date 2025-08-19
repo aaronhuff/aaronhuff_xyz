@@ -4,17 +4,18 @@ import { Download, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface HeroProps {
-  scrollToSection: (sectionId: string) => void;
+  scrollToSection: (sectionId:string) => void;
 }
+
+const roles = [
+  "Network Automation Engineer",
+  "Infrastructure as Code Specialist",
+  "DevOps Engineer"
+];
 
 const Hero = ({ scrollToSection }: HeroProps) => {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const roles = [
-    "Network Automation Engineer",
-    "Infrastructure as Code Specialist",
-    "DevOps Engineer"
-  ];
 
   useEffect(() => {
     const currentRole = roles[currentIndex];
@@ -36,7 +37,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
   }, [currentIndex]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 pb-16">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
@@ -47,7 +48,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="animate-fade-in">
-          <div className="mb-6 pt-24 md:pt-32 lg:pt-40 xl:pt-48">
+          <div className="mb-6 pt-16">
             <pre className="text-lg md:text-2xl font-mono font-bold leading-none">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
 {`  █████╗  █████╗ ██████╗  ██████╗ ███╗   ██╗

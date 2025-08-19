@@ -44,17 +44,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-300 font-medium">Location</p>
-                  <p className="text-gray-400">Available for remote work</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-lg">
-                  <Phone className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-gray-300 font-medium">Response Time</p>
-                  <p className="text-gray-400">Usually within 24 hours</p>
+                  <p className="text-gray-400">Chatham, Ontario, Canada</p>
                 </div>
               </div>
             </div>
