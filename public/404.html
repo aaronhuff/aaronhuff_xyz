@@ -4,12 +4,10 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      // Get the current path excluding the base path
-      const path = window.location.pathname.replace('/aaronhuff_xyz', '');
       // Store the full path including search and hash
-      sessionStorage.redirect = path + window.location.search + window.location.hash;
+      sessionStorage.redirect = window.location.pathname + window.location.search + window.location.hash;
       // Redirect to the base URL
-      window.location.replace('/aaronhuff_xyz/');
+      window.location.replace('/');
     </script>
   </head>
   <body>
