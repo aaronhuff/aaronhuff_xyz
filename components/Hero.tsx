@@ -3,17 +3,8 @@ import { useEffect, useState } from "react";
 import { Download, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-interface HeroProps {
-  scrollToSection: (sectionId:string) => void;
-}
-
-const roles = [
-  "Network Automation Engineer",
-  "Infrastructure as Code Specialist",
-  "DevOps Engineer"
-];
-
-const Hero = ({ scrollToSection }: HeroProps) => {
+import Link from 'next/link';
+const Hero = () => {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,7 +25,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
     }, 100);
 
     return () => clearInterval(typingInterval);
-  }, [currentIndex]);
+  }, [currentIndex, roles]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 pb-16">
@@ -78,12 +69,13 @@ const Hero = ({ scrollToSection }: HeroProps) => {
             that scale. I transform complex network challenges into elegant Python-powered solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              onClick={() => scrollToSection('projects')}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              View My Work
-            </Button>
+            <Link href="/#projects">
+              <Button
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              >
+                View My Work
+              </Button>
+            </Link>
             <a
               href="https://storage.googleapis.com/ahuff/man-page-aaronhuff.pdf"
               target="_blank"
