@@ -7,6 +7,11 @@ import Link from 'next/link';
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
+  const roles = [
+    "Network Automation Engineer",
+    "Cloud Solutions Architect",
+    "Python Developer",
+  ];
 
   useEffect(() => {
     const currentRole = roles[currentIndex];
