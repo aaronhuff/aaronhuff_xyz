@@ -25,6 +25,7 @@ This project is built with:
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
 - [shadcn/ui](https://ui.shadcn.com/) - A collection of re-usable components.
 - [Jules](https://jules.ai/) - The primary development tool for this project.
+- [Lovable](https://lovable.dev) - The ai tool that built the website.
 
 ## Deployment
 
