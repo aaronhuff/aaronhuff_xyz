@@ -15,14 +15,8 @@ const Index = () => {
     offset: ["start start", "end start"]
   });
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-
   return (
-    <div ref={ref} className="min-h-screen relative overflow-x-hidden">
-      <motion.div
-        className="absolute inset-0 z-[-1]"
-        style={{ y: backgroundY }}
-      />
+    <div ref={ref} className="min-h-screen relative overflow-x-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <Hero />
       <div id="about">
