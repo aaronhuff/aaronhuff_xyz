@@ -4,33 +4,51 @@ import { Download, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import Link from 'next/link';
+
+const roles = [
+  "Network Automation Engineer",
+  "Cloud Solutions Architect",
+  "Python Developer",
+];
+const TYPING_SPEED = 100;
+const DELETING_SPEED = 50;
+const PAUSE_DURATION = 1500;
+
 const Hero = () => {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const roles = [
-    "Network Automation Engineer",
-    "Cloud Solutions Architect",
-    "Python Developer",
-  ];
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const currentRole = roles[currentIndex];
-    let charIndex = 0;
-    const typingInterval = setInterval(() => {
-      if (charIndex < currentRole.length) {
-        setDisplayText(currentRole.slice(0, charIndex + 1));
-        charIndex++;
+    const handleTyping = () => {
+      const currentRole = roles[roleIndex];
+      // If deleting, slice from the end.
+      if (isDeleting) {
+        if (charIndex > 0) {
+          setDisplayText(currentRole.substring(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+        } else {
+          // Finished deleting, switch to next role and start typing
+          setIsDeleting(false);
+          setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+        }
       } else {
-        clearInterval(typingInterval);
-        setTimeout(() => {
-          setCurrentIndex((prev) => (prev + 1) % roles.length);
-          setDisplayText("");
-        }, 2000);
+        // If typing, add characters
+        if (charIndex < currentRole.length) {
+          setDisplayText(currentRole.substring(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        } else {
+          // Finished typing, wait then start deleting
+          setTimeout(() => setIsDeleting(true), PAUSE_DURATION);
+        }
       }
-    }, 100);
+    };
 
-    return () => clearInterval(typingInterval);
-  }, [currentIndex, roles]);
+    const timeout = setTimeout(handleTyping, isDeleting ? DELETING_SPEED : TYPING_SPEED);
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, roleIndex]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 pb-16">
