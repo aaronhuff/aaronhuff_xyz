@@ -65,7 +65,7 @@ const Projects = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={cardVariants}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 0.8, delay: index * 0.3 }}
             whileHover={{ scale: 1.05, boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.5)" }}
           >
             <Card className="bg-white/5 border-gray-700 group h-full">
