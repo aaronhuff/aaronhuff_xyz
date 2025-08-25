@@ -103,8 +103,7 @@
   }
 
   body {
-    @apply text-foreground;
-    background: linear-gradient(90deg, #312e81 0%, #6d28d9 100%);
+    @apply bg-background text-foreground;
     overflow-x: hidden; /* Prevents horizontal scrolling */
   }
 }
