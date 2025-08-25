@@ -16,7 +16,6 @@ const Navigation = () => {
             <MotionLink href="/#about" className="text-gray-300 hover:text-white transition-colors" whileHover={{ scale: 1.1 }}>About</MotionLink>
             <MotionLink href="/#projects" className="text-gray-300 hover:text-white transition-colors" whileHover={{ scale: 1.1 }}>Projects</MotionLink>
             <MotionLink href="/#contact" className="text-gray-300 hover:text-white transition-colors" whileHover={{ scale: 1.1 }}>Contact</MotionLink>
-            <MotionLink href="/blog" className="text-gray-300 hover:text-white transition-colors" whileHover={{ scale: 1.1 }}>Blog</MotionLink>
           </div>
         </div>
       </div>
