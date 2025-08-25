@@ -18,20 +18,22 @@ const Index = () => {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   return (
-    <div ref={ref} className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div ref={ref} className="min-h-screen relative">
+      <motion.div
+        className="absolute inset-0 z-[-1] bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+        style={{ y: backgroundY }}
+      />
       <Navigation />
       <Hero />
-      <motion.div style={{ y: backgroundY }}>
-        <div id="about">
-          <About />
-        </div>
-        <div id="projects">
-          <Projects />
-        </div>
-        <div id="contact">
-          <Contact />
-        </div>
-      </motion.div>
+      <div id="about">
+        <About />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
       <Footer />
     </div>
   );
