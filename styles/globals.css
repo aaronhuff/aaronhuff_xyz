@@ -97,8 +97,14 @@
     @apply border-border;
   }
 
+  html,
+  body {
+    @apply h-full min-h-screen;
+  }
+
   body {
     @apply text-foreground;
     background: linear-gradient(90deg, #312e81 0%, #6d28d9 100%);
+    overflow-x: hidden; /* Prevents horizontal scrolling */
   }
 }
