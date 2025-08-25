@@ -38,8 +38,7 @@ const About = () => {
           className="space-y-6"
         >
           <motion.p variants={variants} className="text-lg text-gray-300 leading-relaxed">
-            With over 5 years of experience in network automation and cloud-native development, 
-            I specialize in bridging the gap between traditional networking and modern cloud infrastructure.
+            With over 15 years of experience in technology, I specialize in bridging the gap between traditional networking and modern cloud infrastructure.
           </motion.p>
           <motion.p variants={variants} className="text-lg text-gray-300 leading-relaxed">
             My expertise spans from automating complex network configurations with Python and Ansible 
