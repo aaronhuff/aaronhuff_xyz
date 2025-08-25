@@ -1,5 +1,8 @@
 
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+const MotionLink = motion(Link);
 
 const Navigation = () => {
   return (
@@ -10,10 +13,10 @@ const Navigation = () => {
             aaronhuff.xyz
           </Link>
           <div className="hidden md:flex space-x-8">
-            <Link href="/#about" className="text-gray-300 hover:text-white transition-colors">About</Link>
-            <Link href="/#projects" className="text-gray-300 hover:text-white transition-colors">Projects</Link>
-            <Link href="/#contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
-            <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link>
+            <MotionLink href="/#about" className="text-gray-300 hover:text-white transition-colors" whileHover={{ scale: 1.1 }}>About</MotionLink>
+            <MotionLink href="/#projects" className="text-gray-300 hover:text-white transition-colors" whileHover={{ scale: 1.1 }}>Projects</MotionLink>
+            <MotionLink href="/#contact" className="text-gray-300 hover:text-white transition-colors" whileHover={{ scale: 1.1 }}>Contact</MotionLink>
+            <MotionLink href="/blog" className="text-gray-300 hover:text-white transition-colors" whileHover={{ scale: 1.1 }}>Blog</MotionLink>
           </div>
         </div>
       </div>
