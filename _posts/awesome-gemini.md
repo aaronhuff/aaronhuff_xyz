@@ -2,6 +2,7 @@
 title: 'Awesome Gemini: A Curated List of Resources'
 date: '2024-07-20'
 excerpt: 'A curated list of resources, tools, apps, and power-user workflows for Google Gemini.'
+image: 'https://images.unsplash.com/photo-1724322545385-1871ad76712c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA=='
 ---
 
 # Awesome Gemini
