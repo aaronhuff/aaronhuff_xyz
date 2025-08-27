@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
 const MotionLink = motion(Link);
