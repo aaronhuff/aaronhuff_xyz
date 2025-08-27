@@ -37,11 +37,11 @@ const Navigation = () => {
               <SheetContent side="left" className="bg-slate-900/80 border-r border-white/10 text-white">
                 <div className="flex flex-col space-y-8 pt-12">
                   {navLinks.map((link) => (
-                    <SheetTrigger asChild key={link.href}>
-                        <MotionLink href={link.href} className="text-gray-300 hover:text-white transition-colors text-2xl" whileHover={{ scale: 1.05 }}>
-                          {link.label}
-                        </MotionLink>
-                    </SheetTrigger>
+                    <SheetClose asChild key={link.href}>
+                      <MotionLink href={link.href} className="text-gray-300 hover:text-white transition-colors text-2xl" whileHover={{ scale: 1.05 }}>
+                        {link.label}
+                      </MotionLink>
+                    </SheetClose>
                   ))}
                 </div>
               </SheetContent>
