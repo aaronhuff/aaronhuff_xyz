@@ -9,6 +9,7 @@ const roles = [
   "Network Automation Engineer",
   "Cloud Solutions Architect",
   "Python Developer",
+  "Idiot",
 ];
 const TYPING_SPEED = 100;
 const DELETING_SPEED = 50;
