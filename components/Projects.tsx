@@ -66,10 +66,12 @@ const Projects = () => {
             animate={isInView ? "visible" : "hidden"}
             variants={cardVariants}
             transition={{ duration: 0.8, delay: index * 0.3 }}
-            whileHover={{ scale: 1.05, boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.5)" }}
+            whileHover={{ scale: 1.05, boxShadow: "0px 10px 30px rgba(59, 130, 246, 0.2)" }}
+            className="h-full"
           >
-            <Card className="bg-white/5 border-gray-700 group h-full">
-              <CardContent className="p-6 flex flex-col h-full">
+            <Card className="bg-white/10 backdrop-blur-xl border-white/20 hover:border-blue-500/50 transition-colors group h-full relative overflow-hidden">
+              <CardContent className="p-6 flex flex-col h-full relative z-10">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {project.title}
                 </h3>

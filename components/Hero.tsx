@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Download, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 import Link from 'next/link';
 
@@ -56,31 +57,29 @@ const Hero = () => {
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="animate-fade-in">
-          <div className="mb-6 pt-16">
-            <pre className="text-[6px] sm:text-[8px] md:text-[12px] lg:text-lg xl:text-2xl font-mono font-bold leading-none whitespace-pre">
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-{`  █████╗  █████╗ ██████╗  ██████╗ ███╗   ██╗
- ██╔══██╗██╔══██╗██╔══██╗██╔═══██╗████╗  ██║
- ███████║███████║██████╔╝██║   ██║██╔██╗ ██║
- ██╔══██║██╔══██║██╔══██╗██║   ██║██║╚██╗██║
- ██║  ██║██║  ██║██║  ██║╚██████╔╝██║ ╚████║
- ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
-
- ██╗  ██╗██╗   ██╗███████╗███████╗
- ██║  ██║██║   ██║██╔════╝██╔════╝
- ███████║██║   ██║█████╗  █████╗  
- ██╔══██║██║   ██║██╔══╝  ██╔══╝  
- ██║  ██║╚██████╔╝██║     ██║     
- ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝     `}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-6 pt-16"
+          >
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-lg">
+                Aaron Huff
               </span>
-            </pre>
-          </div>
-          <div className="h-16 md:h-20 mb-8">
+            </h1>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="h-16 md:h-20 mb-8"
+          >
             <h2 className="text-2xl md:text-3xl text-gray-300 font-light">
               {displayText}
               <span className="animate-pulse">|</span>
             </h2>
-          </div>
+          </motion.div>
           <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             Passionate about automating network infrastructure and building cloud-native solutions 
             that scale. I transform complex network challenges into elegant Python-powered solutions.
@@ -88,7 +87,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/#projects">
               <Button
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] text-white px-8 py-6 rounded-full text-lg font-semibold transition-all duration-300 transform hover:-translate-y-1"
               >
                 View My Work
               </Button>
@@ -101,7 +100,7 @@ const Hero = () => {
             >
               <Button 
                 variant="outline" 
-                className="border-gray-600 text-gray-300 hover:bg-white hover:text-black px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300"
+                className="border-gray-600 text-gray-300 hover:bg-white hover:text-black hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] px-8 py-6 rounded-full text-lg font-semibold transition-all duration-300 transform hover:-translate-y-1"
               >
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
