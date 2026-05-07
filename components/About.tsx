@@ -46,14 +46,20 @@ const About = () => {
             and believe in the power of automation to solve real-world problems.
           </motion.p>
           <motion.div variants={variants} className="grid grid-cols-2 gap-4 mt-8">
-            <div className="text-center p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="text-center p-4 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 shadow-xl transition-all duration-300"
+            >
               <div className="text-3xl font-bold text-blue-400">20+</div>
               <div className="text-gray-400">Projects Completed</div>
-            </div>
-            <div className="text-center p-4 bg-white/5 rounded-lg backdrop-blur-sm">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="text-center p-4 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 shadow-xl transition-all duration-300"
+            >
               <div className="text-3xl font-bold text-purple-400">15+</div>
               <div className="text-gray-400">Years Experience</div>
-            </div>
+            </motion.div>
           </motion.div>
         </motion.div>
         
@@ -71,9 +77,11 @@ const About = () => {
               <h4 className="text-lg font-medium text-gray-300 mb-2">Programming Languages</h4>
               <div className="flex flex-wrap gap-2">
                 {["Python", "Bash", "PowerShell"].map((tech) => (
-                  <Badge key={tech} variant="secondary" className="bg-blue-500/20 text-blue-300 border-blue-500/30">
-                    {tech}
-                  </Badge>
+                  <motion.div key={tech} whileHover={{ scale: 1.1, rotate: 2 }}>
+                    <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 border-blue-500/30">
+                      {tech}
+                    </Badge>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -81,9 +89,11 @@ const About = () => {
               <h4 className="text-lg font-medium text-gray-300 mb-2">Network Protocols</h4>
               <div className="flex flex-wrap gap-2">
                 {["BGP", "OSPF", "EIGRP", "RIP"].map((tech) => (
-                  <Badge key={tech} variant="secondary" className="bg-cyan-500/20 text-cyan-300 border-cyan-500/30">
-                    {tech}
-                  </Badge>
+                  <motion.div key={tech} whileHover={{ scale: 1.1, rotate: 2 }}>
+                    <Badge variant="secondary" className="bg-cyan-500/20 text-cyan-300 border-cyan-500/30">
+                      {tech}
+                    </Badge>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -91,9 +101,11 @@ const About = () => {
               <h4 className="text-lg font-medium text-gray-300 mb-2">Automation & IaC</h4>
               <div className="flex flex-wrap gap-2">
                 {["Ansible", "Terraform", "Nautobot", "CI/CD", "GitHub Actions"].map((tech) => (
-                  <Badge key={tech} variant="secondary" className="bg-purple-500/20 text-purple-300 border-purple-500/30">
-                    {tech}
-                  </Badge>
+                  <motion.div key={tech} whileHover={{ scale: 1.1, rotate: 2 }}>
+                    <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 border-purple-500/30">
+                      {tech}
+                    </Badge>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -101,9 +113,11 @@ const About = () => {
               <h4 className="text-lg font-medium text-gray-300 mb-2">Cloud & Container Platforms</h4>
               <div className="flex flex-wrap gap-2">
                 {["Azure", "Oracle Cloud", "Kubernetes", "Docker"].map((tech) => (
-                  <Badge key={tech} variant="secondary" className="bg-green-500/20 text-green-300 border-green-500/30">
-                    {tech}
-                  </Badge>
+                  <motion.div key={tech} whileHover={{ scale: 1.1, rotate: 2 }}>
+                    <Badge variant="secondary" className="bg-green-500/20 text-green-300 border-green-500/30">
+                      {tech}
+                    </Badge>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -111,9 +125,11 @@ const About = () => {
               <h4 className="text-lg font-medium text-gray-300 mb-2">Network Platforms</h4>
               <div className="flex flex-wrap gap-2">
                 {["Cisco IOS", "Cisco NXOS", "Versa SD-WAN", "Cisco DNA Center", "Versa Director"].map((tech) => (
-                  <Badge key={tech} variant="secondary" className="bg-orange-500/20 text-orange-300 border-orange-500/30">
-                    {tech}
-                  </Badge>
+                  <motion.div key={tech} whileHover={{ scale: 1.1, rotate: 2 }}>
+                    <Badge variant="secondary" className="bg-orange-500/20 text-orange-300 border-orange-500/30">
+                      {tech}
+                    </Badge>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -121,9 +137,11 @@ const About = () => {
               <h4 className="text-lg font-medium text-gray-300 mb-2">Enterprise Tools & DevOps</h4>
               <div className="flex flex-wrap gap-2">
                 {["Infoblox", "ServiceNow", "GitHub", "Git", "Azure DevOps"].map((tech) => (
-                  <Badge key={tech} variant="secondary" className="bg-red-500/20 text-red-300 border-red-500/30">
-                    {tech}
-                  </Badge>
+                  <motion.div key={tech} whileHover={{ scale: 1.1, rotate: 2 }}>
+                    <Badge variant="secondary" className="bg-red-500/20 text-red-300 border-red-500/30">
+                      {tech}
+                    </Badge>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -131,9 +149,11 @@ const About = () => {
               <h4 className="text-lg font-medium text-gray-300 mb-2">Agile & Project Management</h4>
               <div className="flex flex-wrap gap-2">
                 {["Scrum Master", "Sprint Planning", "Sprint Reviews", "Retrospectives"].map((tech) => (
-                  <Badge key={tech} variant="secondary" className="bg-indigo-500/20 text-indigo-300 border-indigo-500/30">
-                    {tech}
-                  </Badge>
+                  <motion.div key={tech} whileHover={{ scale: 1.1, rotate: 2 }}>
+                    <Badge variant="secondary" className="bg-indigo-500/20 text-indigo-300 border-indigo-500/30">
+                      {tech}
+                    </Badge>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -141,9 +161,11 @@ const About = () => {
               <h4 className="text-lg font-medium text-gray-300 mb-2">AI Development</h4>
               <div className="flex flex-wrap gap-2">
                 {["Agentic AI Development", "Large Language Models", "Prompt Engineering"].map((tech) => (
-                  <Badge key={tech} variant="secondary" className="bg-yellow-500/20 text-yellow-300 border-yellow-500/30">
-                    {tech}
-                  </Badge>
+                  <motion.div key={tech} whileHover={{ scale: 1.1, rotate: 2 }}>
+                    <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-300 border-yellow-500/30">
+                      {tech}
+                    </Badge>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
